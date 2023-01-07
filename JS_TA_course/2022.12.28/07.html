@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>btn1</button>
+    <button>btn2</button>
+    <button>btn3</button>
+    <button>btn4</button>
+    <button>btn4</button>
+    <button>btn4</button>
+    <button>btn4</button>
+
+    <script>
+        //1.先找到btn的DOM
+        const btn2
+        const btn3 = btnArr[2]
+        const btn4 = btnArr[3]
+        btn.onclick = function(){
+            two()
+            three()
+        }
+
+        const btn5 = btnArr[4]
+        btn.addEvenListener('click',function()){
+            two()
+            three()
+        }
+
+
+        // onclick vs addEventListener
+        const btn6 = btnArr[5]
+        btn6.onclick = function(){
+            alert('AAAA')
+        }
+        btn6.onclick = function(){
+            alert('BBBB')
+        }
+
+        const removeBtn btnArr[7]
+
+        function handleBtn(){
+            alert('100')
+        }
+
+        removeBtn.addEventListener('click',handleBtn)
+        removeBtn.remeoveEventListener()
+       
+
+
+
+    </script>
+    
+</body>
+
+</html>

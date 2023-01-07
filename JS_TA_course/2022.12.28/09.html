@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let list = [
+            { item: '啤酒', type: '喝的' },
+            { item: '汽水', type: '喝的' },
+            { item: '火鍋', type: '吃的' },
+            { item: '燒烤', type: '吃的' },
+            { item: '冰淇淋', type: '吃的' }
+        ]
+
+
+
+        //找到第一個'吃的' C#: first ,js:find
+        let r1 = list.find(x => x.type =="吃的")
+        console.log(r1)
+
+         //找到所有'吃的' C#: where ,js:filter
+        let r2 = list.filter(x =>x.type =='吃的')
+        console.log(r2)
+
+        //找冰淇淋索引 C#: elementAt,js:indexOf,findIndex
+        
+        //indexOf
+        let ice = list.find(x=>x.item == '冰淇淋')
+        let r3_1 = list.indexOf(ice)
+        console.log(r3_1)
+
+        //findIndex
+        let r3_2 = list.findIndex(x => x.item == '冰淇淋')
+        console.log(r3_2)
+
+        
+        let r4 = list.map(el.item)
+        console.log(r4)
+
+        let r5 = list.map((el.idx) =>{
+            return{
+                id:idx,
+                name:el.item
+            }
+        })
+
+        console.log(r5)
+
+        // 排序
+        const nums_1 = [9,6,4,2,1]
+        let r6 = nums_1.sort((a,b)=>{console.log(`a:${a},b:${b}`)
+            console.log
+        })
+
+        console.log(r6)
+        let r7 = r5.sort((a,b)=>b.id - a.id)
+        console.log(r7)
+
+        // 挑戰:12生肖排序
+        const zodiac = [鼠、牛、虎、兔、龍、蛇、馬、羊、猴、雞、狗、豬]
+        
+    </script>
+    
+</body>
+
+</html>

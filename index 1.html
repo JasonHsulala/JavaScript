@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warning{
+            color: #f00;
+        }
+        .h1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="food" class="h1">
+        <li>麵包</li>
+        <li>蛋糕</li>
+    </ul> 
+    
+    <input type="text" class="num-input">
+
+
+    <script> //寫JavaScript區,顯示web在主控台
+
+    //
+    let numInput = document.querySelector('.num-input')
+    console.log(numInput)
+    console.log(numInput.value)
+    
+//#region  
+console.log('hello')
+
+//DOM - document object model , JS透過 DOM 取得HTML的東西
+let ulDOM = document.querySelector('#food')
+console.dir(ulDOM)
+//對 ul 新增一個class 叫 "warning"
+ulDOM.classList.add('warning')
+//對 ul 移除 h1 class
+ulDOM.classList.remove('h1')
+//檢查 ul 裡是否包含
+console.log(
+    ulDOM.classList.contains
+)
+//#region 
+ //選擇HTML的ul
+//  let ulDOM1 = document.querySelector('ul')
+// // console.log(ulDOM)
+// console.dir(ulDOM1)
+// console.dir(ulDOM1.children[0])
+// //console.log(ulDOM.children[0].innerText)
+
+// //選取器
+// let ulDOM2 = document.querySelector('#food')
+// ulDOM2.children[1].innerText ='蘋果汁'
+// console.dir(ulDOM2.children[1])
+//#endregion
+
+
+//#endregion
+
+    </script>
+</body>
+</html>

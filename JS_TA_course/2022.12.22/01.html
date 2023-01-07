@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row">
+        <!-- 3 * 3 的表格 -->
+    </div>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+
+    <script>
+        // step1. 先抓父節點
+        const row = document.querySelector('.row')
+
+        // step2. 規劃表格
+        // <table>           
+        //  <thead>
+        //    <tr>
+        //      <th></th>
+        //      <th></th>
+        //      <th></th>
+        //    </tr>
+        //  </thead>
+        //  <tbody>
+        //      <tr>
+        //          <td></td>
+        //          <td></td>
+        //          <td></td>
+        //      </tr>
+        //      <tr>
+        //          <td></td>
+        //          <td></td>
+        //          <td></td>
+        //      </tr>
+        //      <tr>
+        //          <td></td>
+        //          <td></td>
+        //          <td></td>
+        //      </tr>
+        //  </tbody>
+        // </table>
+        // step3. 產出表格DOM節點
+        let table = document.createElement('table')//<table>
+        table.setAttribute('border', '1')//自訂CSS屬性
+
+        let thead = document.createElement('thead')//<thead>
+        let tbody = document.createElement('tbody')//<tbody>
+        let theadTr = document.createElement('tr')//<tr>
+        //thead
+        for (let i = 1; i <= 3; i++) {//3*3的table
+            let th = document.createElement('th')//<th></th>
+            th.innerText = i//內容index
+
+            theadTr.appendChild(th) //tr裡加入th
+        }
+        table.appendChild(thead)//table裡加入thead
+        thead.appendChild(theadTr)//thead裡加入tr
+        
+
+        for (let i = 1; i < 3; i++) {//可能很多tr>td for loop 
+            let tr = document.createElement('tr')//<tr>
+            for (let j = 1; j <= 3; j++) {
+                let td = document.createElement('td')//<td>
+                td.innerText = j//內容index
+
+                tr.appendChild(td)//tr裡加入td
+            }
+
+            tbody.appendChild(tr)//tbody裡加入tr
+        }
+
+        table.appendChild(tbody)//table裡加入tbody
+
+        // step4. 把完成的需求節點放進父節點
+        row.appendChild(table)//.row裡加入table
+    </script>
+</body>
+
+</html>

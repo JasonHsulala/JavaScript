@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <img src="" alt="">
+    
+    <button onclick="changeImg()">點我換圖片</button>
+    <button onclick="watchPassword()">點我看密碼</button>
+
+    <script>
+        const input = document.querySelector('input')
+        const img = document.querySelector('img')
+        const arr=[
+            {id:'1',name:'cal'},
+            {id:'2',name:'andy'},
+            {id:'3',name:'jimmy'}
+
+        ]
+        //img
+        //attribute
+        //src
+        //-alt
+
+        function changeImg(){
+            //TODO
+            //點了按鈕
+            //可以看見密碼
+            input.type = 'text'
+
+            console.log(input.value)
+        }
+        function watchPassword(){}
+    </script>
+</body>
+</html>

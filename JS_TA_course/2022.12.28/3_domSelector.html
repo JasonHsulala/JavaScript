@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: flex;
+        }
+        .box div{
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="red"  class="div"></div>
+        <div class="div"></div>
+
+        <div class="box"></div>
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+
+        </ul>
+    </div>
+    <script>
+        //document.getElementById()
+        const div_1 = document.getElementById('red')
+        console.log(div_1)
+
+        const div_2 = document.getElementsByClassName('box')
+        console.log(div_2)
+
+        const div_4 = document.querySelector('#red')
+        console.log(div_4)
+
+        const div_5 = document.querySelectorAll('.div')
+        console.log(div_5)
+
+        //NodeList & HTMLCollection 差異
+        //- NodeList 可以foreach
+
+        const arr = document.querySelectorAll('li')
+        const arr2 = document.getElementsByTagName('li')
+
+        console.log(arr)
+        console.log(arr2)
+
+        //往 ul 內塞 li
+        document.querySelector('ul').appendChild(document.createElement('li'))
+
+        console.log(arr)
+        console.log(arr2)
+
+        arr.forEach(el => console.log(el))
+        arr2.forEach(el => console.log(el))
+
+    
+
+
+    </script>
+</body>
+</html>

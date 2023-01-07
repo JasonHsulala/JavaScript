@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Build Weichen School</h1>
+    <script>
+        //console.log & console.dir
+        const h1 = document.querySelector('h1')
+
+        console.log(h1)
+        
+        console.dir(h1)//看屬性，dir只能作用在dom上面
+
+        const obj = {
+            name:'Jason'
+        }
+        console.log(obj)
+        console.dir(obj)//dir 在 一般 object 沒有特別的作用
+
+
+        //console.table
+        const arr =  [{name: 'Jason',age:25},{name: 'Steven',age:25},{name: 'Kimi',age:24}]
+        const arr2 = [1,2,3]
+        const arr3 = [4,5,6]
+        const arr4 = [{age:25},{age:26},{age:27}]
+        
+        console.table(arr)
+        console.table(arr2)
+        // console.warn vs console.error
+        console.warn('Jason is a bad boy')//這是警告
+        console.error('Jason is a bad guy')//這是錯誤
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head name="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body name="body">
+    <h1>自訂Selector function</h1>
+
+    <p>iPhone</p>
+    <p>iPad</p>
+    <p>Mac</p>
+
+    <ul>
+        <li>JavaScript</li>
+        <li>ASP.NET MVC</li>
+        <li>.NET Core</li>
+    </ul>
+
+    <button>Access Node/NodeList/HTMLCollection</button>
+
+    <script>
+        let h1, ps, ul, btn;
+    </script>
+
+
+    <script type="module">
+        import { $g as $got } from "../modules/helpers.js";
+        debugger;
+
+
+        
+
+        window.onload = function () {
+            btn = $got("button");
+            btn.addEventListener("click", showInfo);
+            debugger;
+
+        }
+
+        function showInfo() {
+            h1 = $g("h1");
+            ps = $g("p");
+            ul = $g("li");
+
+            //1.Node
+            $log(`${h1},${h1.nodeName,${h1.nodeType}`);
+
+            //2.NodeList
+            $log(`${ps},${ps[0].nodeName},${ps[0].nodeType}`);
+            console.log
+
+           
+            debugger;
+        }
+
+
+    </script>
+</body>
+
+</html>

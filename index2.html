@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 123 -->
+    <input type="text" id ="num-input">
+    <!-- click -->
+    <button class="btn">點我</button>
+
+    <span>123</span>
+    
+    <script>
+        //去 html 抓到 input id=num-input
+        let myInput = document.querySelector('#num-input')
+        //選到第一個符合 選擇器條件的 html tag
+        let myBtn = document.querySelector('.btn')
+
+        //let myBtns = document.querySelectorAll
+        
+        // myInput 的 value 印出來
+        // console.log(myInput.innerText);
+        
+        //對 myInput 新增  輸入(input)的 事件監聽
+        // myInput.addEventListener('input',function(){
+        //     console.log(myInput.value);
+        // })
+        //對 myBtn新增點擊事件 監聽
+        myBtn.addEventListener('click',function(){
+
+            let tmp = myInput;
+            console.dir(tmp);    
+        })
+        //TODO:把 input 的 value 印出來
+        // console.log(myInput.value)
+
+        // TODO:1.抓到 input value
+        // let tmp = myInput.innerHTML
+        // console.log(tmp)
+        //TODO:2把tmp的值 塞進去 span
+        // mySpan.innerText = tmp
+
+    </script>
+</body>
+</html>
